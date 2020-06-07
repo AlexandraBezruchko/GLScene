@@ -133,3 +133,22 @@ void __fastcall TForm1::GLSceneViewer1MouseMove(TObject *Sender, TShiftState Shi
 	mdx = X; mdy = Y;
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::Help2Click(TObject *Sender)
+{
+ShowMessage(L"При нажатии на кнопку 'Load Weapon' персонажу дается орудие. В выпадающем списке можно выбрать интересующую Вас анимацмю и при нажатии на кнопку 'Play' она будет проигрываться");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Help3Click(TObject *Sender)
+{
+ShowMessage(L"Это приложение позвоняет обозревать анимации для персонажа и просматривать FPS при этом.");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormCloseQuery(TObject *Sender, bool &CanClose)
+{
+if (MessageDlg("Вы уверены, что хотите закрыть приложение?", mtConfirmation, TMsgDlgButtons() << mbOK << mbCancel,0) == mrCancel)
+	CanClose = false;
+}
+//---------------------------------------------------------------------------
+

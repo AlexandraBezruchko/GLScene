@@ -26,6 +26,7 @@
 #include "GLFileMD2.hpp"
 #include "GLBaseClasses.hpp"
 #include "GLUtils.hpp"
+#include <Vcl.Menus.hpp>
 
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
@@ -51,6 +52,10 @@ __published:	// IDE-managed Components
 	TGLActor *Actor2;
 	TGLCadencer *GLCadencer1;
 	TTimer *Timer1;
+	TMainMenu *MainMenu1;
+	TMenuItem *Help1;
+	TMenuItem *Help2;
+	TMenuItem *Help3;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall CBAnimationsChange(TObject *Sender);
 	void __fastcall SBFrameToFrameClick(TObject *Sender);
@@ -62,6 +67,9 @@ __published:	// IDE-managed Components
 	void __fastcall Timer1Timer(TObject *Sender);
 	void __fastcall GLSceneViewer1MouseMove(TObject *Sender, TShiftState Shift, int X,
           int Y);
+	void __fastcall Help2Click(TObject *Sender);
+	void __fastcall Help3Click(TObject *Sender);
+	void __fastcall FormCloseQuery(TObject *Sender, bool &CanClose);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
